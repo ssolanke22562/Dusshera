@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happiest Dussera To You • Sarthak Solanke and Family</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Happiest Dussera To You! Auspicious Vijayadashami greetings, interactive bow and arrow celebration, and golden blessings from Sarthak Solanke and Family." />
+  <meta name="keywords" content="Happy Dussehra, Vijayadashami wishes, Dussehra 2026, Sarthak Solanke, Victory of Good over Evil, Ravan Dahan, Lord Rama" />
+  <meta property="og:title" content="Happiest Dussera To You • Sarthak Solanke & Family" />
+  <meta property="og:description" content="Celebrate the triumph of Good over Evil with fireworks, interactive divine bow, and golden blessings. Regards Sarthak Solanke and Family." />
+  <meta property="og:image" content="/assets/dussehra_hero.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0d081f" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏹</text></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Great+Vibes&family=Outfit:wght@300;400;500;600;700&family=Rozha+One&family=Yatra+One&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body>
+  <!-- High Performance Festive Canvas (Fireworks, Petals, Sona Leaves, Embers) -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Divine Ambience Glow Layer -->
+  <div class="divine-ambient-aura"></div>
+
+  <!-- Main Application Wrapper -->
+  <div id="app" class="app-container">
+    
+    <!-- Top Festive Bar -->
+    <header class="top-nav-bar">
+      <div class="nav-brand">
+        <span class="om-symbol">ॐ</span>
+        <div class="brand-text">
+          <span class="brand-title">VIJAYADASHAMI</span>
+          <span class="brand-subtitle">DUSSEHRA MAHOTSAV</span>
+        </div>
+      </div>
+
+      <div class="nav-controls">
+        <button id="btn-audio-toggle" class="nav-pill-btn audio-btn" title="Toggle Festive Sound">
+          <span class="audio-icon-wrap">
+            <span class="sound-wave wave-1"></span>
+            <span class="sound-wave wave-2"></span>
+            <span class="sound-wave wave-3"></span>
+          </span>
+          <span id="audio-label">Music: OFF</span>
+        </button>
+
+        <button id="btn-shower-sona" class="nav-pill-btn gold-btn" title="Shower Golden Leaves (Sona Vrusthi)">
+          <span class="btn-emoji">🌸</span>
+          <span class="btn-text">Shower Sona</span>
+        </button>
+
+        <button id="btn-share-top" class="nav-pill-btn share-btn" title="Share Wishes">
+          <span class="btn-emoji">✨</span>
+          <span class="btn-text">Share</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Showcase Section -->
+    <section class="hero-section">
+      <!-- Sacred Sanskrit Shloka Badge -->
+      <div class="sanskrit-badge-wrapper">
+        <div class="sanskrit-badge">
+          <span class="ornament-leaf left">✦</span>
+          <span class="shloka-text">॥ यतो धर्मस्ततो जयः ॥</span>
+          <span class="ornament-leaf right">✦</span>
+        </div>
+        <div class="shloka-translation">"Where there is Dharma (Righteousness), there is Victory"</div>
+      </div>
+
+      <!-- Hero Visual Art Card with Glowing Golden Border -->
+      <div class="hero-card-container">
+        <div class="hero-art-frame">
+          <img src="/assets/dussehra_hero.jpg" alt="Lord Rama drawing golden bow on Vijayadashami with Ravana effigy" class="hero-art-img" />
+          <div class="hero-art-overlay"></div>
+          <div class="hero-art-radiance"></div>
+
+          <!-- Floating Golden Diya / Bow Emblem Badge -->
+          <div class="floating-emblem-badge">
+            <img src="/assets/gold_emblem.jpg" alt="Dussehra Golden Emblem" class="emblem-img" />
+          </div>
+        </div>
+
+        <!-- Greeting Announcement Typography -->
+        <div class="hero-content-box">
+          <div class="festive-pre-title">
+            <span class="sparkle-star">✨</span>
+            <span class="pre-text">AUSPICIOUS VIJAYADASHAMI BLESSINGS</span>
+            <span class="sparkle-star">✨</span>
+          </div>
+
+          <!-- THE REQUIRED TEXT: "Happiest Dussera To You" -->
+          <h1 class="main-greeting-title" id="greeting-heading">
+            <span class="title-line-1">Happiest Dussera</span>
+            <span class="title-line-2">To You</span>
+          </h1>
+
+          <!-- Personalized Name Tag (if customized) -->
+          <div id="personalized-recipient-tag" class="recipient-tag-badge" style="display: none;">
+            For Dear <span id="recipient-name-display">Friend</span>
+          </div>
+
+          <p class="greeting-message-body">
+            May the divine blessings of Lord Rama illuminate your journey with valor, truth, and enduring prosperity. 
+            May this sacred day burn away all obstacles, conquer all doubts, and usher in joy, health, and triumphant success into your life!
+          </p>
+
+          <!-- Golden Sona Gifting Tradition Banner -->
+          <div class="sona-tradition-banner">
+            <span class="gold-coin-icon">🍃</span>
+            <div class="sona-banner-text">
+              <strong>"सोने सारखे राहा, सोन्यासारखे प्रेम करा"</strong>
+              <span>Wishing you a life as pure and prosperous as Gold on this auspicious day!</span>
+            </div>
+          </div>
+
+          <!-- THE REQUIRED REGARDS: "regards Sarthak Solanke and Family" -->
+          <div class="regards-signature-card">
+            <div class="regards-label">Warmest Wishes & Divine Regards,</div>
+            <div class="signature-name" id="signature-text">
+              Sarthak Solanke and Family
+            </div>
+            <div class="signature-seal">
+              <span class="seal-ring"></span>
+              <span class="seal-icon">🏹</span>
+              <span class="seal-text">SOLANKE PARIVAR</span>
+            </div>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-action-group">
+            <button id="btn-scroll-bow" class="cta-primary-btn">
+              <span class="btn-arrow-icon">🏹</span>
+              <span>Fire the Divine Arrow</span>
+            </button>
+            <button id="btn-open-personalize" class="cta-secondary-btn">
+              <span>✍️ Customize for Family</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Epic Arena: Lord Rama's Bow vs Ravana Effigy -->
+    <section class="interactive-epic-arena" id="bow-arena-section">
+      <div class="section-header">
+        <span class="section-tag">INTERACTIVE EXPERIENCE</span>
+        <h2 class="section-title">The Triumph of Good Over Evil</h2>
+        <p class="section-desc">Pull the celestial string of Lord Rama's <em>Kodanda</em> bow or press fire to release the blazing <em>Brahmastra</em> arrow and burn down the 10 evils of the Ravana effigy!</p>
+      </div>
+
+      <div class="epic-battleground">
+        
+        <!-- Left: Divine Bow (Kodanda) -->
+        <div class="bow-side-column">
+          <div class="bow-character-card">
+            <div class="character-tag">LORD RAMA'S BOW • KODANDA</div>
+            
+            <!-- Interactive Bow SVG Canvas Wrapper -->
+            <div class="bow-interactive-zone">
+              <svg class="bow-svg" viewBox="0 0 100 260" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#FFF275" />
+                    <stop offset="50%" stop-color="#E5A600" />
+                    <stop offset="100%" stop-color="#996000" />
+                  </linearGradient>
+                  <filter id="bowGlow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="3" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                  </filter>
+                </defs>
+
+                <!-- Bow Limbs -->
+                <path d="M 40,10 Q 10,70 15,130 Q 10,190 40,250" 
+                      fill="none" 
+                      stroke="url(#goldGradient)" 
+                      stroke-width="7" 
+                      stroke-linecap="round"
+                      filter="url(#bowGlow)" />
+                
+                <!-- Ornate Bow Details -->
+                <circle cx="40" cy="10" r="5" fill="#FFE066" />
+                <circle cx="40" cy="250" r="5" fill="#FFE066" />
+                <path d="M 15,130 Q 5,130 10,130" stroke="#FF5722" stroke-width="9" stroke-linecap="round" />
+
+                <!-- Dynamic Bow String -->
+                <path class="bow-string-path" d="M 40,10 Q 40,130 40,250" fill="none" stroke="#FFF8DC" stroke-width="2.5" />
+              </svg>
+
+              <!-- Divine Arrow Element -->
+              <div class="divine-arrow" title="Drag back and release to shoot!">
+                <div class="arrow-flame-aura"></div>
+                <div class="arrow-shaft"></div>
+                <div class="arrow-head"></div>
+                <div class="arrow-fletching"></div>
+                <div class="arrow-drag-handle">
+                  <span>◀ PULL</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="bow-controls">
+              <button id="btn-fire-arrow" class="epic-fire-btn">
+                <span class="fire-icon">🏹</span>
+                <span>Release Divine Arrow</span>
+              </button>
+              <button id="btn-replay-arrow" class="epic-replay-btn" style="display: none;">
+                <span>🔄 Replay Victory Arrow</span>
+              </button>
+            </div>
+            <div class="bow-hint">Tip: You can drag the arrow back with mouse or finger to aim!</div>
+          </div>
+        </div>
+
+        <!-- Right: 10-Headed Ravana Effigy -->
+        <div class="ravan-side-column">
+          <div class="ravan-effigy-wrapper">
+            
+            <!-- Aura & Flames -->
+            <div class="ravan-fire-effect"></div>
+            
+            <!-- Ravana 10 Heads Row -->
+            <div class="ravan-heads-row">
+              <div class="ravan-subhead head-1"><div class="mini-crown">👑</div><div class="mini-face">😈</div><div class="head-trait">Lust</div></div>
+              <div class="ravan-subhead head-2"><div class="mini-crown">👑</div><div class="mini-face">😠</div><div class="head-trait">Anger</div></div>
+              <div class="ravan-subhead head-3"><div class="mini-crown">👑</div><div class="mini-face">🤑</div><div class="head-trait">Greed</div></div>
+              <div class="ravan-subhead head-4"><div class="mini-crown">👑</div><div class="mini-face">🦹</div><div class="head-trait">Ego</div></div>
+              
+              <!-- Main Central Crowned Head -->
+              <div class="ravan-mainhead head-main">
+                <div class="grand-crown">👑</div>
+                <div class="main-face">👺</div>
+                <div class="mustache">〰️</div>
+                <div class="head-trait major">Ahankara (Pride)</div>
+              </div>
+
+              <div class="ravan-subhead head-5"><div class="mini-crown">👑</div><div class="mini-face">👿</div><div class="head-trait">Jealousy</div></div>
+              <div class="ravan-subhead head-6"><div class="mini-crown">👑</div><div class="mini-face">🤥</div><div class="head-trait">Deceit</div></div>
+              <div class="ravan-subhead head-7"><div class="mini-crown">👑</div><div class="mini-face">😒</div><div class="head-trait">Selfishness</div></div>
+              <div class="ravan-subhead head-8"><div class="mini-crown">👑</div><div class="mini-face">😡</div><div class="head-trait">Injustice</div></div>
+              <div class="ravan-subhead head-9"><div class="mini-crown">👑</div><div class="mini-face">👹</div><div class="head-trait">Cruelty</div></div>
+            </div>
+
+            <!-- Effigy Torso & Amrit Nabhi Target -->
+            <div class="ravan-torso">
+              <div class="torso-armor">
+                <div class="chest-plate"></div>
+                <!-- Divine Target (Amrit Kund in Navel) -->
+                <div class="amrit-navel-target" title="Target: The source of invulnerability">
+                  <span class="target-pulse"></span>
+                  <span class="target-icon">🎯</span>
+                </div>
+              </div>
+              <div class="effigy-skirt"></div>
+              <div class="effigy-base-pedestal">
+                <span>EFFIGY OF RAVANA</span>
+              </div>
+            </div>
+
+            <!-- Defeat Fire Overlay -->
+            <div class="effigy-burn-sparks"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Victory Celebration Banner (Appears on Hit) -->
+      <div class="victory-celebration-banner">
+        <div class="victory-banner-inner">
+          <div class="victory-badge">VIJAYOTSAV • SATYA KI VIJAY</div>
+          <h3 class="victory-banner-title">॥ अधर्म पर धर्म की विजय ॥</h3>
+          <p class="victory-banner-text">
+            All 10 evils have been defeated! As Lord Rama triumphed over Ravana, 
+            may you conquer every adversity with righteousness, love, and courage.
+          </p>
+          <div class="victory-regards">Heartiest Vijayadashami Wishes from Sarthak Solanke & Family</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Diya Lighting Ritual Section -->
+    <section class="diyas-sacred-section">
+      <div class="section-header">
+        <span class="section-tag">DIVINE BLESSINGS</span>
+        <h2 class="section-title">Light The 5 Auspicious Diyas</h2>
+        <p class="section-desc">Click or tap each sacred clay diya to ignite its eternal flame and receive its unique Vijayadashami blessing.</p>
+      </div>
+
+      <div class="diyas-grid">
+        <!-- Diya 1 -->
+        <div class="diya-card" data-diya="arogya" data-blessing="May you and your family be blessed with vibrant health, longevity, and boundless vitality!">
+          <div class="diya-flame-wrapper">
+            <div class="flame-core"></div>
+            <div class="flame-glow"></div>
+          </div>
+          <div class="diya-clay-lamp">🪔</div>
+          <div class="diya-title">Arogya</div>
+          <div class="diya-subtitle">Health & Vitality</div>
+          <button class="diya-action-btn">Light Diya</button>
+        </div>
+
+        <!-- Diya 2 -->
+        <div class="diya-card" data-diya="samriddhi" data-blessing="May prosperity, wealth, and golden abundance overflow into your home like holy amrit!">
+          <div class="diya-flame-wrapper">
+            <div class="flame-core"></div>
+            <div class="flame-glow"></div>
+          </div>
+          <div class="diya-clay-lamp">🪔</div>
+          <div class="diya-title">Samriddhi</div>
+          <div class="diya-subtitle">Wealth & Abundance</div>
+          <button class="diya-action-btn">Light Diya</button>
+        </div>
+
+        <!-- Diya 3 -->
+        <div class="diya-card active-lit" data-diya="vijaya" data-blessing="May every noble endeavour you embark upon culminate in glorious victory and honor!">
+          <div class="diya-flame-wrapper">
+            <div class="flame-core"></div>
+            <div class="flame-glow"></div>
+          </div>
+          <div class="diya-clay-lamp">🪔</div>
+          <div class="diya-title">Vijaya</div>
+          <div class="diya-subtitle">Triumph & Success</div>
+          <button class="diya-action-btn">Lighted ✨</button>
+        </div>
+
+        <!-- Diya 4 -->
+        <div class="diya-card" data-diya="shanti" data-blessing="May serenity, tranquility, and divine peace soothe your mind, family, and home!">
+          <div class="diya-flame-wrapper">
+            <div class="flame-core"></div>
+            <div class="flame-glow"></div>
+          </div>
+          <div class="diya-clay-lamp">🪔</div>
+          <div class="diya-title">Shanti</div>
+          <div class="diya-subtitle">Peace & Harmony</div>
+          <button class="diya-action-btn">Light Diya</button>
+        </div>
+
+        <!-- Diya 5 -->
+        <div class="diya-card" data-diya="gyan" data-blessing="May goddess Saraswati and Lord Rama bestow supreme wisdom, intellect, and clarity upon you!">
+          <div class="diya-flame-wrapper">
+            <div class="flame-core"></div>
+            <div class="flame-glow"></div>
+          </div>
+          <div class="diya-clay-lamp">🪔</div>
+          <div class="diya-title">Gyan</div>
+          <div class="diya-subtitle">Wisdom & Truth</div>
+          <button class="diya-action-btn">Light Diya</button>
+        </div>
+      </div>
+
+      <!-- Diya Blessing Display Popup / Banner -->
+      <div id="diya-blessing-banner" class="diya-blessing-box">
+        <span class="blessing-icon">✨</span>
+        <div id="diya-blessing-text" class="blessing-message">Click on any diya to kindle its sacred flame and reveal its blessing!</div>
+      </div>
+    </section>
+
+    <!-- Cultural Traditions: Sona (Apta Leaves) & Ayudha Puja -->
+    <section class="festive-traditions-section">
+      <div class="traditions-card-grid">
+        <div class="tradition-card">
+          <div class="tradition-icon">🍃</div>
+          <h3 class="tradition-title">The Legend of Sona (Apta Leaves)</h3>
+          <p class="tradition-text">
+            According to Maharashtrian & Indian tradition, Kautsa's devotion prompted Lord Kuber to shower golden coins on Shami and Apta trees. 
+            Ever since, exchanging Apta leaves on Dussehra signifies gifting purest Gold and spreading boundless prosperity.
+          </p>
+          <button id="btn-collect-sona" class="tradition-action-btn">
+            <span>🎁 Receive Your Gold Leaves</span>
+          </button>
+        </div>
+
+        <div class="tradition-card">
+          <div class="tradition-icon">⚔️</div>
+          <h3 class="tradition-title">Ayudha Puja & New Beginnings</h3>
+          <p class="tradition-text">
+            Vijayadashami is considered the most auspicious day of the year for starting new businesses, purchasing vehicles, 
+            commencing learning (Vidyarambham), and invoking blessings on tools of craft and livelihood.
+          </p>
+          <div class="tradition-stat">
+            <span class="stat-highlight">Auspicious Muhurat</span>
+            <span class="stat-sub">Vijay Muhurta for Prosperity</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Share & Personalize Modal / Drawer -->
+    <section class="share-wishes-section">
+      <div class="share-card-container">
+        <div class="share-emblem">💌</div>
+        <h2 class="share-heading">Share These Blessed Dussehra Wishes</h2>
+        <p class="share-sub">Spread joy and festive smiles with your loved ones, colleagues, and family!</p>
+
+        <!-- Personalization Input -->
+        <div class="personalize-form">
+          <label for="recipient-input" class="form-label">Add Recipient Name (Optional):</label>
+          <div class="input-with-button">
+            <input type="text" id="recipient-input" placeholder="e.g. Ramesh, Priya, Sharma Family..." maxlength="35" />
+            <button id="btn-apply-name" class="form-btn">Update Card</button>
+          </div>
+        </div>
+
+        <!-- Sharing Buttons -->
+        <div class="share-button-row">
+          <button id="btn-share-whatsapp" class="social-share-btn whatsapp-btn">
+            <span class="social-icon">💬</span>
+            <span>Share via WhatsApp</span>
+          </button>
+          
+          <button id="btn-copy-link" class="social-share-btn copy-btn">
+            <span class="social-icon">📋</span>
+            <span id="copy-btn-text">Copy Greeting Link</span>
+          </button>
+        </div>
+
+        <div class="signature-tagline">
+          Greetings curated with devotion & love by <strong>Sarthak Solanke and Family</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <div class="footer-marigold-toran"></div>
+      <div class="footer-content">
+        <div class="footer-symbol">🪔 ✦ 🏹 ✦ 🍃</div>
+        <p class="footer-greeting">
+          Happiest Dussera To You & Your Family!
+        </p>
+        <p class="footer-regards">
+          Warm Regards: <strong>Sarthak Solanke and Family</strong>
+        </p>
+        <p class="footer-copy">
+          Designed with love for Vijayadashami • Deployable on Vercel
+        </p>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast-notification" class="toast-popup">
+    <span class="toast-icon">✨</span>
+    <span id="toast-message">Greeting link copied!</span>
+  </div>
+
+  <!-- Vite Scripts -->
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
